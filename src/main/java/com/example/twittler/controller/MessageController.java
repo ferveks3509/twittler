@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.security.Principal;
+
 @Controller
 public class MessageController {
 
@@ -24,7 +26,8 @@ public class MessageController {
     }
 
     @PostMapping("/save")
-    public String add(@ModelAttribute Message message) {
+    public String add(@ModelAttribute Message message, Principal principal) {
+        message.setAuthor(principal.getName());
         messageService.saveMessage(message);
         return "redirect:/index";
     }

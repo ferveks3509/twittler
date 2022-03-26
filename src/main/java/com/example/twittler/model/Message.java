@@ -1,9 +1,6 @@
 package com.example.twittler.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -14,6 +11,7 @@ public class Message {
 
     private String text;
     private String tag;
+    private String author;
 
     public Message() {
     }
@@ -21,6 +19,14 @@ public class Message {
     public Message(String text, String tag) {
         this.text = text;
         this.tag = tag;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public int getId() {

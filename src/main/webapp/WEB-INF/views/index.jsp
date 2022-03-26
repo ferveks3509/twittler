@@ -24,6 +24,7 @@
             <td>id</td>
             <td>text</td>
             <td>tag</td>
+            <td>author</td>
         </tr>
         </thead>
         <tbody>
@@ -32,6 +33,7 @@
             <td><c:out value="${message.id}"/></td>
             <td><c:out value="${message.text}"/></td>
             <td><c:out value="${message.tag}"/></td>
+            <td><c:out value="${message.author}"/></td>
         </tr>
         </tbody>
         </c:forEach>
