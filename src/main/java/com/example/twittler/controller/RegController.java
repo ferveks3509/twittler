@@ -28,7 +28,7 @@ public class RegController {
     public String regSave(@ModelAttribute User user) {
         user.setEnabled(true);
         user.setPassword(encoder.encode(user.getPassword()));
-        user.setAuthority(authorities.findByAuthority("ROLE_USER"));
+        user.setAuthority(authorities.findByAuthority("ROLE_ADMIN"));
         users.save(user);
         return "redirect:/login";
     }

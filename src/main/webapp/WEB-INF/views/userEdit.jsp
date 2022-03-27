@@ -1,0 +1,20 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование пользователя</title>
+</head>
+<body>
+<div>
+    <a href="<c:url value='/index'/>">Гланая</a>
+</div>
+<div>
+    <form action="<c:url value="/users/save?id=${user.id}"/> " method="post">
+        <input type="text" name="username" placeholder="Имя пользователя"/>
+        <button type="submit">Добавить</button>
+    </form>
+</div>
+</body>
+</html>

@@ -10,6 +10,7 @@
 <div>
     <a href="<c:url value='/index'/>">Гланая</a>
     <a href="<c:url value='/create'/>">Создать</a>
+    <a href="<c:url value='/users'/>">Пользователи</a>
 </div>
 <div>
     <form action="<c:url value="/filter"/> " method="post">
